@@ -1,9 +1,11 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/layout"
+import Layout from "../components/layout";
+import Head from "../components/head";
 const IndexPage = () => {
   return (
     <Layout>
+      <Head title="Home" />
       <React.Fragment>
         <div>
           <h1>Faiz Hameed</h1>
@@ -11,7 +13,7 @@ const IndexPage = () => {
         </div>
       </React.Fragment>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
