@@ -1,5 +1,11 @@
 .header {
   padding: 1rem 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .logo {
+    width: 300px;
+  }
 }
 
 .link {
@@ -15,7 +21,9 @@
 .navList {
   display: flex;
   list-style-type: none;
-  margin: 0;
+  vertical-align: middle;
+  margin: auto 0;
+  height: fit-content;
 }
 .nav-item {
   color: #999999;

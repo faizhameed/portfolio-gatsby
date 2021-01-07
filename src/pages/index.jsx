@@ -13,8 +13,7 @@ const IndexPage = () => {
       <React.Fragment>
         <div className={styles.container}>
           <div>
-            <h1>Faiz Hameed</h1>
-            <p>Full Stack Web Developer</p>
+            <p>Let's give life to your Dream</p>
           </div>
           <img className={styles.coderImg} src={CoderImg} alt="coder" />
         </div>

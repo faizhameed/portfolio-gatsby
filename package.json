@@ -17,6 +17,7 @@
     "@contentful/rich-text-html-renderer": "^13.4.0",
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "contentful": "^7.14.0",
+    "dayjs": "^1.10.2",
     "gatsby": "^2.19.19",
     "gatsby-plugin-react-helmet": "^3.1.23",
     "gatsby-plugin-sass": "^2.1.29",
