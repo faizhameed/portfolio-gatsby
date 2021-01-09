@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import Logo from "../assets/logo.png";
 /* import "./header.module.scss" */
 import headerStyles from "./header.module.scss"; //css modules
