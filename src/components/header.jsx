@@ -26,7 +26,7 @@ const Header = () => {
             activeClassName={headerStyles.activeNavItem}
             to="/contact"
           >
-            Contact Page
+            Contact
           </Link>
         </li>
         <li>
@@ -35,7 +35,7 @@ const Header = () => {
             activeClassName={headerStyles.activeNavItem}
             to="/about"
           >
-            About Page
+            About
           </Link>
         </li>
         <li>
@@ -44,7 +44,7 @@ const Header = () => {
             activeClassName={headerStyles.activeNavItem}
             to="/blog"
           >
-            Blog Page
+            Blog
           </Link>
         </li>
       </ul>
