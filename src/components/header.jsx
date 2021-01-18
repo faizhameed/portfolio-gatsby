@@ -1,20 +1,19 @@
 import React from "react";
 import { Link } from "gatsby";
-import Logo from "../assets/logo.png";
 /* import "./header.module.scss" */
-import headerStyles from "./header.module.scss"; //css modules
+import styles from "./header.module.scss"; //css modules
 
 const Header = () => {
   return (
-    <header className={headerStyles.header}>
-      <Link className={headerStyles.title} to="/">
-        <img src={Logo} alt="logo" className={headerStyles.logo} />
+    <header className={styles.header}>
+      <Link className={styles.title} to="/">
+        <div className={styles.logoName}>Faiz.H</div>
       </Link>
-      <ul className={headerStyles.navList}>
+      <ul className={styles.navList}>
         <li>
           <Link
-            className={headerStyles.navItem}
-            activeClassName={headerStyles.activeNavItem}
+            className={styles.navItem}
+            activeClassName={styles.activeNavItem}
             to="/"
           >
             Home
@@ -22,8 +21,8 @@ const Header = () => {
         </li>
         <li>
           <Link
-            className={headerStyles.navItem}
-            activeClassName={headerStyles.activeNavItem}
+            className={styles.navItem}
+            activeClassName={styles.activeNavItem}
             to="/contact"
           >
             Contact
@@ -31,8 +30,8 @@ const Header = () => {
         </li>
         <li>
           <Link
-            className={headerStyles.navItem}
-            activeClassName={headerStyles.activeNavItem}
+            className={styles.navItem}
+            activeClassName={styles.activeNavItem}
             to="/about"
           >
             About
@@ -40,8 +39,8 @@ const Header = () => {
         </li>
         <li>
           <Link
-            className={headerStyles.navItem}
-            activeClassName={headerStyles.activeNavItem}
+            className={styles.navItem}
+            activeClassName={styles.activeNavItem}
             to="/blog"
           >
             Blog
