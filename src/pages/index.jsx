@@ -13,6 +13,17 @@ const IndexPage = () => {
       <React.Fragment>
         <div className={styles.container}>
           <div>
+            <div className={styles.title}>Hello !</div>
+            <h2 className={styles.title}>
+              <span style={{ fontStyle: "italic", fontWeight: "lighter" }}>
+                I'm{" "}
+              </span>
+              Faiz Hameed
+            </h2>
+            <p style={{ fontWeight: "bolder" }}>
+              Professional web developer specialised in ReactJS, NodeJs,
+              GatsbyJs, NextJs and Electron
+            </p>
             <p>Let's give life to your Dream</p>
           </div>
           <img className={styles.coderImg} src={CoderImg} alt="coder" />
