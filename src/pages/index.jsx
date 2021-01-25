@@ -12,7 +12,7 @@ const IndexPage = () => {
       <Head title="Home" />
       <React.Fragment>
         <div className={styles.container}>
-          <div>
+          <div className={styles.content}>
             <div className={styles.title}>Hello !</div>
             <h2 className={styles.title}>
               <span style={{ fontStyle: "italic", fontWeight: "lighter" }}>
@@ -22,9 +22,11 @@ const IndexPage = () => {
             </h2>
             <p style={{ fontWeight: "bolder" }}>
               Professional web developer specialised in ReactJS, NodeJs,
-              GatsbyJs, NextJs and Electron
+              GatsbyJs, NextJs and Electron. I Have 4 years of experience in web
+              development. I believe in creating value and success to my clients
+              through my work.
             </p>
-            <p>Let's give life to your Dream</p>
+            <p>Now Let's give life to your Dream</p>
           </div>
           <img className={styles.coderImg} src={CoderImg} alt="coder" />
         </div>
