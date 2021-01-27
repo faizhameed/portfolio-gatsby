@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "./header";
 import Footer from "./footer";
+import "@fontsource/potta-one";
+import "@fontsource/lato";
 import "../styles/index.scss";
 import layoutStyles from "./layout.module.scss";
 
