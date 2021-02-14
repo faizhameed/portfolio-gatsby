@@ -15,7 +15,7 @@ const HomePage = () => {
             </span>
             Faiz Hameed
           </h2>
-          <p style={{ fontWeight: "bolder" }}>
+          <p>
             Professional web developer specialised in ReactJS, NodeJs, GatsbyJs,
             NextJs and Electron. I Have 4 years of experience in web
             development. I believe in creating value and success to my clients
