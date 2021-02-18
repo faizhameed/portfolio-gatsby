@@ -1,9 +1,27 @@
 import React from "react";
 import styles from "./index.module.scss";
 import CoderImg from "../../assets/svg/coder.svg";
-import { MyProjects } from "./enum";
-
+import { graphql, useStaticQuery } from "gatsby";
 const HomePage = () => {
+  const projectsList = useStaticQuery(graphql`
+    query {
+      allContentfulMyProjects {
+        edges {
+          node {
+            createdAt
+            projectTitle
+            projectImage {
+              file {
+                url
+              }
+            }
+            description
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <React.Fragment>
       <div className={styles.container}>
@@ -28,10 +46,15 @@ const HomePage = () => {
       <div>
         <h2 className={styles.prj_heading}>My Works</h2>
         <div>
-          {MyProjects.map((item) => (
+          {projectsList.allContentfulMyProjects.edges.map((project, i) => (
             <div>
-              <div className={styles.prj_title}>{item.name}</div>
-              <div>{item.description}</div>
+              <div className={styles.prj_title}>
+                {project.node.projectTitle}
+              </div>
+              <div>
+                <img src={project.node.projectImage.file.url} alt="project" />
+              </div>
+              <div>{project.node.description}</div>
             </div>
           ))}
         </div>
