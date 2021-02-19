@@ -52,7 +52,11 @@ const HomePage = () => {
                 {project.node.projectTitle}
               </div>
               <div>
-                <img src={project.node.projectImage.file.url} alt="project" />
+                <img
+                  className={styles.image}
+                  src={project.node.projectImage.file.url}
+                  alt="project"
+                />
               </div>
               <div>{project.node.description}</div>
             </div>
