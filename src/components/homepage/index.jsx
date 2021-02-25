@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./index.module.scss";
 import CoderImg from "../../assets/svg/coder.svg";
 import { graphql, useStaticQuery } from "gatsby";
+import ProjectCard from "../ProjectCard";
 const HomePage = () => {
   const projectsList = useStaticQuery(graphql`
     query {
@@ -45,21 +46,13 @@ const HomePage = () => {
       </div>
       <div>
         <h2 className={styles.prj_heading}>My Works</h2>
-        <div>
+        <div className={styles.project_container}>
           {projectsList.allContentfulMyProjects.edges.map((project, i) => (
-            <div>
-              <div className={styles.prj_title}>
-                {project.node.projectTitle}
-              </div>
-              <div>
-                <img
-                  className={styles.image}
-                  src={project.node.projectImage.file.url}
-                  alt="project"
-                />
-              </div>
-              <div>{project.node.description}</div>
-            </div>
+            <ProjectCard
+              projectTitle={project.node.projectTitle}
+              imgUrl={project.node.projectImage.file.url}
+              description={project.node.description}
+            />
           ))}
         </div>
       </div>
