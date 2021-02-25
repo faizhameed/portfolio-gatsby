@@ -11,6 +11,11 @@
 .coderImg {
   width: 250px;
 }
+
+.project_container {
+  display: flex;
+  flex-wrap: wrap;
+}
 .title {
   font-family: "Quicksand", sans-serif;
   font-size: 30px;
@@ -19,14 +24,4 @@
 .prj_heading {
   font-family: "Quicksand", sans-serif;
   font-size: 20px;
-}
-
-.prj_title {
-  font-family: "Quicksand", sans-serif;
-  font-size: 15px;
-}
-.image {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
 }
