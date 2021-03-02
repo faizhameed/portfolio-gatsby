@@ -17,6 +17,7 @@ const HomePage = () => {
               }
             }
             description
+            id
           }
         }
       }
@@ -52,6 +53,7 @@ const HomePage = () => {
               projectTitle={project.node.projectTitle}
               imgUrl={project.node.projectImage.file.url}
               description={project.node.description}
+              key={project.node.id}
             />
           ))}
         </div>
