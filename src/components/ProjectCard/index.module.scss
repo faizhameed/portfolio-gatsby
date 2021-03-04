@@ -33,7 +33,9 @@
 .image {
   width: 200px;
   height: 200px;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 12px 0px 10px;
 }
 .description {
   font-size: 14px;
