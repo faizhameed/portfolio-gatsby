@@ -11,6 +11,7 @@ const HomePage = () => {
           node {
             createdAt
             projectTitle
+            slug
             projectImage {
               file {
                 url
@@ -53,6 +54,7 @@ const HomePage = () => {
               projectTitle={project.node.projectTitle}
               imgUrl={project.node.projectImage.file.url}
               description={project.node.description}
+              link={`/project_detail/${project.node.slug}`}
               key={project.node.id}
             />
           ))}
