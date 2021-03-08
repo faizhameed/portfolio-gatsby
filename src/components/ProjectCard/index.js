@@ -4,7 +4,7 @@ import styles from "./index.module.scss";
 
 const ProjectCard = ({ projectTitle, imgUrl, description, link }) => {
   return (
-    <Link to={link}>
+    <Link to={link} className={styles.link}>
       <div className={styles.card}>
         <div className={styles.prj_title}>{projectTitle}</div>
         <div>
