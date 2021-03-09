@@ -12,6 +12,7 @@ exports.components = {
   "component---src-pages-about-jsx": hot(preferDefault(require("/home/faiz/Documents/tech_dev/portfolio/gatsby-contentful/src/pages/about.jsx"))),
   "component---src-pages-blog-jsx": hot(preferDefault(require("/home/faiz/Documents/tech_dev/portfolio/gatsby-contentful/src/pages/blog.jsx"))),
   "component---src-pages-contact-jsx": hot(preferDefault(require("/home/faiz/Documents/tech_dev/portfolio/gatsby-contentful/src/pages/contact.jsx"))),
-  "component---src-pages-index-jsx": hot(preferDefault(require("/home/faiz/Documents/tech_dev/portfolio/gatsby-contentful/src/pages/index.jsx")))
+  "component---src-pages-index-jsx": hot(preferDefault(require("/home/faiz/Documents/tech_dev/portfolio/gatsby-contentful/src/pages/index.jsx"))),
+  "component---src-pages-book-review-jsx": hot(preferDefault(require("/home/faiz/Documents/tech_dev/portfolio/gatsby-contentful/src/pages/book_review.jsx")))
 }
 
