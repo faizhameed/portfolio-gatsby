@@ -9,6 +9,7 @@ exports.components = {
   "component---src-pages-about-jsx": () => import("./../src/pages/about.jsx" /* webpackChunkName: "component---src-pages-about-jsx" */),
   "component---src-pages-blog-jsx": () => import("./../src/pages/blog.jsx" /* webpackChunkName: "component---src-pages-blog-jsx" */),
   "component---src-pages-contact-jsx": () => import("./../src/pages/contact.jsx" /* webpackChunkName: "component---src-pages-contact-jsx" */),
-  "component---src-pages-index-jsx": () => import("./../src/pages/index.jsx" /* webpackChunkName: "component---src-pages-index-jsx" */)
+  "component---src-pages-index-jsx": () => import("./../src/pages/index.jsx" /* webpackChunkName: "component---src-pages-index-jsx" */),
+  "component---src-pages-book-review-jsx": () => import("./../src/pages/book_review.jsx" /* webpackChunkName: "component---src-pages-book-review-jsx" */)
 }
 
