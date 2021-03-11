@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 const ContactPage = () => {
   return (
     <Layout>
-      <Head title="contact" />
+      <Head title="contact-faiz" />
       <div>
         <h1>Contact us</h1>
         <p>+919544646977</p>
