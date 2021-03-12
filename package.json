@@ -16,6 +16,7 @@
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^13.4.0",
     "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@fontsource/kristi": "^4.2.2",
     "@fontsource/lato": "^4.1.0",
     "@fontsource/quicksand": "^4.2.0",
     "contentful": "^7.14.0",

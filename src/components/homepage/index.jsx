@@ -31,10 +31,8 @@ const HomePage = () => {
         <div className={styles.content}>
           <div className={styles.title}>Hello !</div>
           <h2 className={styles.title}>
-            <span style={{ fontStyle: "italic", fontWeight: "lighter" }}>
-              I'm{" "}
-            </span>
-            Faiz Hameed
+            <span>I'm </span>
+            <span className={styles.name}>Faiz Hameed</span>
           </h2>
           <p>
             Professional web developer specialised in ReactJS, NodeJs, GatsbyJs,
