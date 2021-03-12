@@ -13,13 +13,15 @@
     background: #fff;
   }
   .logoName {
-    color: #194205;
+    color: #ea5455;
     padding: 20px 0;
-    -webkit-transition: 0.25s;
     transition: 0.25s;
+    font-family: "Kristi", cursive;
+    font-weight: bold;
     &:hover {
       background-color: #4d4d4d;
       color: white;
+      padding-right: 20px;
     }
   }
 }
