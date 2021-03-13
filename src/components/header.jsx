@@ -8,7 +8,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.contentWrapper}>
         <Link className={styles.title} to="/">
-          <div className={styles.logoName}>Faiz.H</div>
+          <div className={styles.logoName}>Faiz Hameed</div>
         </Link>
         <ul className={styles.navList}>
           <li>
@@ -27,15 +27,6 @@ const Header = () => {
               to="/contact"
             >
               Contact
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={styles.navItem}
-              activeClassName={styles.activeNavItem}
-              to="/about"
-            >
-              About
             </Link>
           </li>
           <li>
