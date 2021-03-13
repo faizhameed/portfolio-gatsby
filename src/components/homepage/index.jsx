@@ -31,10 +31,8 @@ const HomePage = () => {
         <div className={styles.content}>
           <div className={styles.title}>Hello !</div>
           <h2 className={styles.title}>
-            <span style={{ fontStyle: "italic", fontWeight: "lighter" }}>
-              I'm{" "}
-            </span>
-            Faiz Hameed
+            <span>I'm </span>
+            <span className={styles.name}>Faiz Hameed</span>
           </h2>
           <p>
             Professional web developer specialised in ReactJS, NodeJs, GatsbyJs,
@@ -42,6 +40,14 @@ const HomePage = () => {
             development. I believe in creating value and success to my clients
             through my work.
           </p>
+          <div>
+            <p>
+              Mechanical Engineer by degree. I worked for a company in Saudi
+              Arabia. The work culture didnt fit me, I was missing something in
+              life. It was then I started going deeper into doing things that
+              gives me pleasure
+            </p>
+          </div>
           <p>Now Let's give life to your Dream</p>
         </div>
         <img className={styles.coderImg} src={CoderImg} alt="coder" />
