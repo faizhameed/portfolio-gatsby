@@ -4,6 +4,8 @@
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: -20px -16px 20px 0px;
   .contentWrapper {
     display: flex;
     flex-wrap: wrap;
