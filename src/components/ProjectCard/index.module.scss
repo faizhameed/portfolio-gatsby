@@ -3,7 +3,7 @@
   padding: 10px;
   background-color: white;
   transition: 0.25s;
-  background: rgba(255, 103, 103, 0.45);
+  background: #fff;
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   border-radius: 10px;
@@ -36,6 +36,7 @@
   object-fit: cover;
   border-radius: 6px;
   margin: 12px 0px 10px;
+  box-shadow: 0px 0px 7px -3px;
 }
 .description {
   font-size: 14px;
