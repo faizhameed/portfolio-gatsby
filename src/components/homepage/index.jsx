@@ -36,18 +36,9 @@ const HomePage = () => {
           </h2>
           <p>
             Professional web developer specialised in ReactJS, NodeJs, GatsbyJs,
-            NextJs and Electron. I Have 4 years of experience in web
-            development. I believe in creating value and success to my clients
-            through my work.
+            NextJs and Electron. Creating value and success to my clients.
           </p>
-          <div>
-            <p>
-              Mechanical Engineer by degree. I worked for a company in Saudi
-              Arabia. The work culture didnt fit me, I was missing something in
-              life. It was then I started going deeper into doing things that
-              gives me pleasure
-            </p>
-          </div>
+          <div></div>
           <p>Now Let's give life to your Dream</p>
         </div>
         <img className={styles.coderImg} src={CoderImg} alt="coder" />
