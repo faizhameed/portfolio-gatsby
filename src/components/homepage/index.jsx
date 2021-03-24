@@ -35,7 +35,7 @@ const HomePage = () => {
             <span className={styles.name}>Faiz Hameed</span>
           </h2>
           <p>
-            Professional web developer specialised in ReactJS, NodeJs, GatsbyJs,
+            Professional developer specialised in ReactJS, NodeJs, GatsbyJs,
             NextJs and Electron. Creating value and success to my clients.
           </p>
           <div></div>
