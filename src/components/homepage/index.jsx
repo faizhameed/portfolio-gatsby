@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./index.module.scss";
-import CoderImg from "../../assets/svg/coder.svg";
 import { graphql, useStaticQuery } from "gatsby";
 import ProjectCard from "../ProjectCard";
 const HomePage = () => {
@@ -41,7 +40,6 @@ const HomePage = () => {
           <div></div>
           <p>Now Let's give life to your Dream</p>
         </div>
-        <img className={styles.coderImg} src={CoderImg} alt="coder" />
       </div>
       <div>
         <h2 className={styles.prj_heading}>My Works</h2>
