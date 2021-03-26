@@ -1,0 +1,9 @@
+.form {
+  label {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  }
+  input {
+    border-width: 0px 0px 1px;
+  }
+}
