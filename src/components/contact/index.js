@@ -3,8 +3,12 @@ import styles from "./index.module.scss";
 
 const ContactForm = () => {
   return (
-    <div>
+    <div className={styles.container}>
+      <div className={styles.address}>
+        <h2>Where to reach me</h2>
+      </div>
       <form className={styles.form}>
+        <h2>Contact Us</h2>
         <label>
           Name
           <input type="text" name="Name" />
