@@ -7,11 +7,6 @@ const ContactPage = () => {
     <Layout>
       <Head title="contact-faiz" />
       <ContactForm />
-      <div>
-        <h1>Contact us</h1>
-        <p>+919544646977</p>
-        <p>Im develop website and applications that scale</p>
-      </div>
     </Layout>
   );
 };
