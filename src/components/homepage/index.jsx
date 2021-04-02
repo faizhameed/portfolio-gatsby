@@ -35,7 +35,7 @@ const HomePage = () => {
           </h2>
           <p>
             Professional developer specialised in ReactJS, NodeJs, GatsbyJs,
-            NextJs and Electron. Creating value and success to my clients.
+            NextJs and Electron
           </p>
           <div></div>
           <p>Now Let's give life to your Dream</p>
