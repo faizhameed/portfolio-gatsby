@@ -31,14 +31,14 @@ const HomePage = () => {
           <div className={styles.title}>Hello !</div>
           <h2 className={styles.title}>
             <span>I'm </span>
-            <span className={styles.name}>Faiz Hameed</span>
+            <span className={styles.name}>Faiz</span>
           </h2>
           <p>
-            Professional developer specialised in ReactJS, NodeJs, GatsbyJs,
-            NextJs and Electron
+            Professional software developer. I built products with React, Next,
+            Gatsby, wordpress and more..
           </p>
           <div></div>
-          <p>Now Let's give life to your Dream</p>
+          <p>Now let's give life to your dream</p>
         </div>
       </div>
       <div>
