@@ -10,7 +10,7 @@ export const query = graphql`
       description
       projectTitle
       content {
-        json
+        raw
       }
     }
   }
@@ -31,7 +31,7 @@ const Project = (props) => {
       <h1>{props.data.contentfulMyProjects.projectTitle}</h1>
       <p>{props.data.contentfulMyProjects.publishedDate}</p>
       {documentToReactComponents(
-        props.data.contentfulMyProjects.content.json,
+        props.data.contentfulMyProjects.content.raw,
         options
       )}
     </Layout>
