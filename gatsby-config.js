@@ -5,7 +5,17 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
-    { resolve: `gatsby-plugin-sass` },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        cssLoaderOptions: {
+          esModule: false,
+          modules: {
+            namedExport: false,
+          },
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
