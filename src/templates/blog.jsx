@@ -1,19 +1,13 @@
 import React from "react";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { BLOCKS, MARKS } from "@contentful/rich-text-types";
+import Img from "gatsby-image";
 import Head from "../components/head";
-/* export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        date
-      }
-      html
-    }
-  }
-` */
+
+const Bold = ({ children }) => <span className="bold">{children}</span>;
+const Text = ({ children }) => <p className="align-center">{children}</p>;
 
 export const query = graphql`
   query($slug: String!) {
@@ -21,30 +15,41 @@ export const query = graphql`
       title
       publishedDate(formatString: "MMMM Do, YYYY")
       body {
-        json
+        raw
+        references {
+          ... on ContentfulAsset {
+            __typename
+            contentful_id
+            fixed(quality: 100, resizingBehavior: NO_CHANGE) {
+              width
+              height
+              src
+              srcSet
+            }
+          }
+        }
       }
     }
   }
 `;
 const Blog = (props) => {
   const options = {
+    renderMark: {
+      [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
+    },
+
     renderNode: {
-      "embedded-asset-block": (node) => {
-        const alt = node.data.target.fields.title["en-US"];
-        const url = node.data.target.fields.file["en-US"].url;
-        return <img alt={alt} src={url} />;
-      },
+      [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+      [BLOCKS.EMBEDDED_ASSET]: (node) => <Img {...node.data.target} />,
     },
   };
+
   return (
     <Layout>
       <Head title={props.data.contentfulBlogPost.title} />
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <p>{props.data.contentfulBlogPost.publishedDate}</p>
-      {documentToReactComponents(
-        props.data.contentfulBlogPost.body.json,
-        options
-      )}
+      {renderRichText(props.data.contentfulBlogPost.body, options)}
     </Layout>
   );
 };

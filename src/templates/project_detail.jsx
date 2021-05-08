@@ -1,8 +1,10 @@
 import React from "react";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Image from "gatsby-image";
 import Head from "../components/head";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { BLOCKS } from "@contentful/rich-text-types";
 
 export const query = graphql`
   query($slug: String!) {
@@ -10,7 +12,19 @@ export const query = graphql`
       description
       projectTitle
       content {
-        json
+        raw
+        references {
+          ... on ContentfulAsset {
+            __typename
+            contentful_id
+            fixed(quality: 100, resizingBehavior: SCALE) {
+              width
+              height
+              src
+              srcSet
+            }
+          }
+        }
       }
     }
   }
@@ -18,11 +32,8 @@ export const query = graphql`
 const Project = (props) => {
   const options = {
     renderNode: {
-      "embedded-asset-block": (node) => {
-        const alt = node.data.target.fields.title["en-US"];
-        const url = node.data.target.fields.file["en-US"].url;
-        return <img alt={alt} src={url} />;
-      },
+      [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+      [BLOCKS.EMBEDDED_ASSET]: (node) => <Image {...node.data.target} />,
     },
   };
   return (
@@ -30,10 +41,7 @@ const Project = (props) => {
       <Head title={props.data.contentfulMyProjects.projectTitle} />
       <h1>{props.data.contentfulMyProjects.projectTitle}</h1>
       <p>{props.data.contentfulMyProjects.publishedDate}</p>
-      {documentToReactComponents(
-        props.data.contentfulMyProjects.content.json,
-        options
-      )}
+      {renderRichText(props.data.contentfulMyProjects.content, options)}
     </Layout>
   );
 };
