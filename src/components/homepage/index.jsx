@@ -10,6 +10,7 @@ const HomePage = () => {
           node {
             createdAt
             projectTitle
+            publishedDate(formatString: "MMMM Do, YYYY")
             slug
             projectImage {
               file {
