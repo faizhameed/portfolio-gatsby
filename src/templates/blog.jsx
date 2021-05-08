@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import Img from "gatsby-image";
