@@ -14,20 +14,20 @@ const ContactForm = () => {
       <form className={styles.form}>
         <h2>{CONTACT_DATA.TITLE}</h2>
         <div className={styles.inputGroup}>
-          <label>Name</label>
-          <input type="text" name="Name" />
+          <input placeholder=" " type="text" name="Name" pm />
+          <label htmlFor="Name">Name</label>
         </div>
         <div className={styles.inputGroup}>
-          <label>Email</label>
-          <input type="emai" name="email" />
+          <input placeholder=" " type="email" name="email" />
+          <label htmlFor="email">Email</label>
         </div>
         <div className={styles.inputGroup}>
-          <label>Phone</label>
-          <input type="text" name="phone" />
+          <input placeholder=" " type="text" name="phone" />
+          <label htmlFor="phone">Phone</label>
         </div>
         <div className={styles.inputGroup}>
-          <label>Message</label>
-          <input type="text" name="message" />
+          <input placeholder=" " type="text" name="message" />
+          <label htmlFor="message">Message</label>
         </div>
         <button className={styles.sbtn} type="submit">
           Submit
