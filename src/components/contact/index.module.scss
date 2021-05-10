@@ -1,11 +1,13 @@
 .form {
   .inputGroup {
     position: relative;
-    margin: 20px 0;
+    margin: 40px 0;
     label {
       position: absolute;
       top: 0px;
+      left: 0px;
       color: #383838;
+      transition: 0.15s;
     }
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
@@ -32,6 +34,14 @@
         border-color: #ea5455;
       }
       margin-bottom: 10px;
+    }
+    input:focus + label {
+      top: -20px;
+      font-size: 12px;
+    }
+    input:not(:placeholder-shown) + label {
+      top: -20px;
+      font-size: 12px;
     }
   }
   button {
