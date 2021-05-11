@@ -1,8 +1,11 @@
 import React from "react";
 import Layout from "../components/layout";
 import { Link, graphql, useStaticQuery } from "gatsby";
-import blogStyles from "./blog.module.scss";
 import Head from "../components/head";
+import { otherBlogPosts } from "../data/blogPosts";
+
+import blogStyles from "./blog.module.scss";
+
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -11,14 +14,20 @@ const BlogPage = () => {
           node {
             title
             slug
-            publishedDate(formatString: "MMMM Do,YYYY")
+            publishedDate(formatString: "MMMM DD YYYY")
           }
         }
       }
     }
   `);
   console.log(data);
-
+  const allPosts = [...data.allContentfulBlogPost.edges, ...otherBlogPosts];
+  const sorted = allPosts.sort((a, b) => {
+    var c = new Date(a.node.publishedDate);
+    var d = new Date(b.node.publishedDate);
+    return d - c;
+  });
+  console.log("allPosts sorted", allPosts, sorted);
   return (
     <Layout>
       <Head title="Blog" />
