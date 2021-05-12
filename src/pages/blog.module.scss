@@ -1,12 +1,23 @@
 .posts {
   list-style-type: none;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .post {
-  margin: 1rem 0;
-  padding: 0 10px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
   background: #f4f4f4;
+  max-width: 300px;
+  transition: 0.25s background;
+  img {
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
   a {
     color: #000000;
     padding: 1px;
@@ -14,11 +25,18 @@
   }
   h2 {
     margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
   }
   p {
     color: #777777;
     font-size: 0.8rem;
     font-style: italic;
+    margin-bottom: 5px;
+  }
+  .excerpt {
+    font-style: normal;
+    font-size: 12px;
   }
   &:hover {
     background: #e4e4e4;
