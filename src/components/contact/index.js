@@ -14,7 +14,7 @@ const ContactForm = () => {
       <form className={styles.form}>
         <h2>{CONTACT_DATA.TITLE}</h2>
         <div className={styles.inputGroup}>
-          <input placeholder=" " type="text" name="Name" pm />
+          <input placeholder=" " type="text" name="Name" />
           <label htmlFor="Name">Name</label>
         </div>
         <div className={styles.inputGroup}>
