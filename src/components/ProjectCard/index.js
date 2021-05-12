@@ -1,4 +1,4 @@
-import { Link, StaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import React from "react";
 import styles from "./index.module.scss";
 
