@@ -6,6 +6,8 @@ import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import Img from "gatsby-image";
 import Head from "../components/head";
 
+import styles from "./blog.module.scss";
+
 const Bold = ({ children }) => <span className="bold">{children}</span>;
 const Text = ({ children }) => <p className="align-center">{children}</p>;
 
@@ -39,8 +41,25 @@ const Blog = (props) => {
     },
 
     renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+      [BLOCKS.PARAGRAPH]: (node, children) => {
+        if (
+          node.content.length === 1 &&
+          node.content[0].marks.find((o) => o.type === "code")
+        ) {
+          return (
+            <pre className={styles.rich_code}>
+              <code>{node.content[0].value}</code>
+            </pre>
+          );
+        }
+        return <Text>{children}</Text>;
+      },
       [BLOCKS.EMBEDDED_ASSET]: (node) => <Img {...node.data.target} />,
+      [BLOCKS.EMBEDDED_ENTRY]: (text) => (
+        <pre>
+          <code>{text}</code>
+        </pre>
+      ),
     },
   };
 
