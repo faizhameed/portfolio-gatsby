@@ -1,16 +1,83 @@
 .form {
-  label {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-  }
-  input {
-    border-width: 0px 0px 1px;
+  .inputGroup {
+    position: relative;
+    margin: 40px 0;
+    label {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      color: #383838;
+      transition: 0.15s;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 30px white inset !important;
+      box-shadow: 0 0 0 30px white inset !important ;
+      -webkit-text-fill-color: #6e2d2d;
+    }
+    input {
+      border-width: 0px 0px 1px;
+      border-color: #ccc;
+      width: 100%;
+      color: #6e2d2d;
+      font-size: 14px;
+      outline: none;
+      transition: 0.25s;
+      &:focus {
+        border-color: #ea5455;
+      }
+      margin-bottom: 10px;
+    }
+    input:focus + label {
+      top: -20px;
+      font-size: 12px;
+    }
+    input:not(:placeholder-shown) + label {
+      top: -20px;
+      font-size: 12px;
+    }
   }
   button {
-    border: 1px solid;
+    border: none;
+    background-color: #383838;
+    color: #ea5455;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px 0 0;
+    transition: 0.25s;
+    padding: 10px 15px;
+    &:hover {
+      color: white;
+      background-color: #1c1c1c;
+    }
   }
 }
 .container {
   display: flex;
   justify-content: space-between;
+  .desc {
+    width: 50%;
+    min-width: 300px;
+    margin-right: 20px;
+  }
+  .form {
+    display: block;
+    width: 50%;
+  }
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    .desc {
+      width: 100%;
+    }
+    .form {
+      width: 100%;
+    }
+  }
 }

@@ -1,0 +1,12 @@
+.rich_code {
+  $margin--small: 27px;
+  background-color: #1d1d1d;
+  color: #fff;
+  margin: (1.5 * $margin--small) (-1 * $margin--small);
+  padding: $margin--small;
+
+  & + & {
+    margin-top: (-2 * $margin--small);
+    padding-top: 0;
+  }
+}
