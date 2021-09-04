@@ -32,7 +32,7 @@ const HomePage = () => {
           <div className={styles.title}>Hello !</div>
           <h2 className={styles.title}>
             <span>I'm </span>
-            <span className={styles.name}>Faiz</span>
+            <span className={styles.name}>Faiz Hameed</span>
           </h2>
           <p>
             Professional software developer. I built products with React, Next,
