@@ -1,10 +1,10 @@
 html {
-  font-family: "lato", sans-serif;
+  font-family: "roboto", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
-  font-family: "lato", sans-serif;
+  font-family: "roboto", sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -186,7 +186,6 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -200,8 +199,8 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: #2d4059;
-  font-family: "lato", sans-serif;
+  color: #1c1c1c;
+  font-family: "roboto", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -229,8 +228,8 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: #ea5455;
-  font-family: "Quicksand", sans-serif;
+  color: #1c1c1c;
+  font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -245,12 +244,13 @@ h2 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: #ea5455;
-  font-family: "lato", sans-serif;
+  color: #1c1c1c;
+  font-family: "roboto", sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 25px;
   line-height: 1.1;
+  letter-spacing: 1px;
 }
 h3 {
   margin-left: 0;
@@ -261,9 +261,9 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: #ea5455;
-  font-family: "lato", sans-serif;
-  font-weight: bold;
+  color: #1c1c1c;
+  font-family: "roboto", sans-serif;
+  font-weight: normal;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
   line-height: 1.1;
@@ -277,9 +277,9 @@ h4 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: #ea5455;
-  font-family: "lato", sans-serif;
-  font-weight: bold;
+  color: #1c1c1c;
+  font-family: "roboto", sans-serif;
+  font-weight: normal;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   line-height: 1.1;
@@ -293,9 +293,9 @@ h5 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: #ea5455;
-  font-family: "lato", sans-serif;
-  font-weight: bold;
+  color: #1c1c1c;
+  font-family: "roboto", sans-serif;
+  font-weight: normal;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
   line-height: 1.1;
@@ -309,9 +309,9 @@ h6 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: #ea5455;
+  color: #1c1c1c;
   font-family: "Roboto", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
   line-height: 1.1;
@@ -378,7 +378,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 10px;
 }
 figure {
   margin-left: 0;
