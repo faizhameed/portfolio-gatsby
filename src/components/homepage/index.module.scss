@@ -24,8 +24,17 @@
 }
 .prj_heading {
   font-family: "Barlow Semi Condensed", sans-serif;
+  border-bottom: 5px solid #ea5455;
+  width: fit-content;
+  padding: 0 0 10px;
+  font-weight: 500;
 }
 .name {
   font-weight: 500;
   font-size: 40px;
+  background: #ea5455;
+  width: fit-content;
+  padding: 10px 16px 10px 5px;
+  color: white;
+  border-radius: 8px;
 }
