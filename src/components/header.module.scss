@@ -13,6 +13,15 @@
     max-width: 1050px;
     padding: 0 1rem;
     background: #fff;
+    @media screen and (max-width: 1300px) {
+      max-width: 650px;
+      @media screen and (max-width: 800px) {
+        max-width: 450px;
+      }
+      @media screen and (max-width: 450px) {
+        max-width: 320px;
+      }
+    }
   }
   .logoName {
     color: #ea5455;
