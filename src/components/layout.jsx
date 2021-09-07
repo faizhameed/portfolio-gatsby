@@ -3,7 +3,7 @@ import Header from "./header";
 import Footer from "./footer";
 import layoutStyles from "./layout.module.scss";
 import "../styles/index.scss";
-import "prismjs/themes/prism-okaidia.css";
+import "prism-theme-one-dark/prism-onedark.css";
 
 const Layout = ({ children }) => {
   return (
