@@ -15,6 +15,7 @@ const BlogPage = () => {
             title
             slug
             publishedDate(formatString: "MMMM DD YYYY")
+            excerpt
             featuredImage {
               fixed(quality: 50) {
                 src
@@ -43,7 +44,7 @@ const BlogPage = () => {
           {allPosts.map((post, i) => {
             if (post.node.url) {
               return (
-                <li key={i} className={blogStyles.post}>
+                <li key={post.node.title} className={blogStyles.post}>
                   <a href={post.node.url} target="__blank">
                     <img src={post.node.Img} alt="" />
                     <h2>{post.node.title}</h2>
@@ -54,11 +55,12 @@ const BlogPage = () => {
               );
             }
             return (
-              <li key={i} className={blogStyles.post}>
+              <li key={post.node.title} className={blogStyles.post}>
                 <Link to={`/blog/${post.node.slug}`}>
                   <img src={post.node.featuredImage.fixed.src} alt="" />
                   <h2>{post.node.title}</h2>
                   <p>{post.node.publishedDate}</p>
+                  <p className={blogStyles.excerpt}>{post.node.excerpt}</p>
                 </Link>
               </li>
             );

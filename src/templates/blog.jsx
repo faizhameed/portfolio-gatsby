@@ -54,13 +54,18 @@ const Blog = (props) => {
             typeof node.content[0].value,
             node.content[0].value.includes("//code_l")
           );
+          let language = "js";
+          if (node.content[0].value.includes("//code_l:")) {
+            language = node.content[0].value
+              .split("\n")[0]
+              .replace("//code_l:", "");
+          }
           return (
             <div className="gatsby-highlight">
-              {/* 
-              TODO: Get the type of language and fix based on the language
-              */}
-              <pre className={`language-js`}>
-                <code>{node.content[0].value}</code>
+              <pre className={`language-${language}`}>
+                <code>
+                  {node.content[0].value.replace(`//code_l:${language}\n`, "")}
+                </code>
               </pre>
             </div>
           );
