@@ -39,7 +39,7 @@ const BlogPage = () => {
     <Layout>
       <Head title="Blog" />
       <div>
-        <h1>Blog</h1>
+        <h2>Blog</h2>
         <ol className={blogStyles.posts}>
           {allPosts.map((post, i) => {
             if (post.node.url) {
