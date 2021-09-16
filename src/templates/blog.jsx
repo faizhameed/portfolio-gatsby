@@ -2,13 +2,18 @@ import React, { useEffect } from "react";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
-import { BLOCKS, MARKS } from "@contentful/rich-text-types";
+import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
 import Img from "gatsby-image";
 import Head from "../components/head";
 import Prism from "prismjs";
+import styles from "./blog.module.scss";
 
 const Bold = ({ children }) => <span className="bold">{children}</span>;
 const Text = ({ children }) => <p className="align-center">{children}</p>;
+const Code = ({ children }) => (
+  <code class={styles.inlineCode}>{children}</code>
+);
+const website_url = "https://www.faizhameed.com";
 
 export const query = graphql`
   query ($slug: String!) {
@@ -41,6 +46,7 @@ const Blog = (props) => {
   const options = {
     renderMark: {
       [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
+      [MARKS.CODE]: (text) => <Code>{text}</Code>,
     },
 
     renderNode: {
@@ -54,12 +60,9 @@ const Blog = (props) => {
             typeof node.content[0].value,
             node.content[0].value.includes("//code_l")
           );
-          let language = "js";
-          if (node.content[0].value.includes("//code_l:")) {
-            language = node.content[0].value
-              .split("\n")[0]
-              .replace("//code_l:", "");
-          }
+          const language = node.content[0].value.includes("//code_l:")
+            ? node.content[0].value.split("\n")[0].replace("//code_l:", "")
+            : "js";
           return (
             <div className="gatsby-highlight">
               <pre className={`language-${language}`}>
@@ -77,6 +80,17 @@ const Blog = (props) => {
         <pre>
           <code>{text}</code>
         </pre>
+      ),
+      [INLINES.HYPERLINK]: ({ data }, children) => (
+        <a
+          href={data.uri}
+          target={`${data.uri.startsWith(website_url) ? "_self" : "_blank"}`}
+          rel={`${
+            data.uri.startsWith(website_url) ? "" : "noopener noreferrer"
+          }`}
+        >
+          {children}
+        </a>
       ),
     },
   };
