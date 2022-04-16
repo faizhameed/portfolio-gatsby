@@ -1,7 +1,9 @@
 import React from "react";
-import styles from "./index.module.scss";
-import { graphql, useStaticQuery } from "gatsby";
+import { HOMEPAGE_DATA } from "../../config/static";
 import ProjectCard from "../ProjectCard";
+import { graphql, useStaticQuery } from "gatsby";
+
+import styles from "./index.module.scss";
 const HomePage = () => {
   const projectsList = useStaticQuery(graphql`
     query {
@@ -29,17 +31,14 @@ const HomePage = () => {
     <React.Fragment>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.title}>Hello !</div>
+          <div className={styles.title}>{HOMEPAGE_DATA.greet}</div>
           <h2 className={styles.title}>
             <span>I'm </span>
-            <span className={styles.name}>Faiz Hameed</span>
+            <span className={styles.name}>{HOMEPAGE_DATA.name}</span>
           </h2>
           <p>
-            Professional software developer. I built products with React, Next,
-            Gatsby, wordpress and more..
+            {HOMEPAGE_DATA.tagline}
           </p>
-          <div></div>
-          <p>Now let's give life to your dream</p>
         </div>
       </div>
       <div>
