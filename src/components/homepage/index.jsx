@@ -2,6 +2,7 @@ import React from "react";
 import { HOMEPAGE_DATA } from "../../config/static";
 import ProjectCard from "../ProjectCard";
 import { graphql, useStaticQuery } from "gatsby";
+import cx from 'classnames'
 
 import styles from "./index.module.scss";
 const HomePage = () => {
@@ -38,6 +39,9 @@ const HomePage = () => {
           </h2>
           <p>
             {HOMEPAGE_DATA.tagline}
+          </p>
+          <p>
+            {HOMEPAGE_DATA.tagline2}
           </p>
         </div>
       </div>
