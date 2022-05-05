@@ -5,7 +5,6 @@ import cx from 'classnames'
 import styles from "./header.module.scss"; //css modules
 
 const Header = ({noShadow}) => {
-  console.log("noShadow",noShadow)
   return (
     <header className={cx(styles.header,{
       [styles.shadow]:!noShadow
