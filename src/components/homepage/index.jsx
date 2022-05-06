@@ -27,9 +27,9 @@ const HomePage = () => {
       }
     }
   `);
-
+  
   return (
-    <React.Fragment>
+    <div >
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.title}>{HOMEPAGE_DATA.greet}</div>
@@ -59,7 +59,7 @@ const HomePage = () => {
           ))}
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
