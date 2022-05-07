@@ -3,12 +3,13 @@ import cx from "classnames";
 import Header from "./header";
 import Footer from "./footer";
 import layoutStyles from "./layout.module.scss";
+import throttle from "../utils/throttle";
 import "../styles/index.scss";
 import "prism-theme-one-dark/prism-onedark.css";
 
 const Layout = ({ children,noShadow,setNoShadow }) => {
 
-  const onScroll = (e) => {
+  const onScroll = throttle((e) => {
     const currentScrollY = e.target.scrollTop;
     if(noShadow){
       if(window.innerHeight-100<currentScrollY){
@@ -19,7 +20,7 @@ const Layout = ({ children,noShadow,setNoShadow }) => {
         setNoShadow(true)
       }
     }
-  };
+  },300)
   return (
     <div onScroll={onScroll}  className={layoutStyles.body}>
       <Header noShadow ={noShadow} />
