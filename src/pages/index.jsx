@@ -14,11 +14,9 @@ useEffect(()=>{
 },[height])
   
   return (
-    <Layout noShadow ={noShadow}>
+    <Layout noShadow ={noShadow} setNoShadow={setNoShadow}>
       <Head title="Home" />
-      <React.Fragment>
-        <HomePage />
-      </React.Fragment>
+      <HomePage />
     </Layout>
   );
 };
