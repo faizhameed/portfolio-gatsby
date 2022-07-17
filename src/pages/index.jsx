@@ -4,11 +4,11 @@ import Layout from "../components/layout";
 import Head from "../components/head";
 
 import HomePage from "../components/homepage";
-import useDimensions from '../hooks/useWindowDimensions'
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 const IndexPage = () => {
   const [noShadow,setNoShadow] = useState(true)
-  const { height, width } = useDimensions();
+  const { height, width } = useWindowDimensions();
 useEffect(()=>{
   console.log(height,width)
 },[height])
