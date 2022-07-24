@@ -17,12 +17,7 @@ export const query = graphql`
           ... on ContentfulAsset {
             __typename
             contentful_id
-            fixed(quality: 100, resizingBehavior: SCALE) {
-              width
-              height
-              src
-              srcSet
-            }
+            gatsbyImageData(quality: 100, resizingBehavior: SCALE) 
           }
         }
       }

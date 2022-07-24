@@ -2,7 +2,6 @@ import React from "react";
 import { HOMEPAGE_DATA } from "../../config/static";
 import ProjectCard from "../ProjectCard";
 import { graphql, useStaticQuery } from "gatsby";
-import cx from 'classnames'
 
 import styles from "./index.module.scss";
 const HomePage = () => {
