@@ -3,10 +3,10 @@ import Layout from "../components/layout";
 import { graphql } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
-import Img from "gatsby-image";
 import Head from "../components/head";
 import Prism from "prismjs";
 import styles from "./blog.module.scss";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Bold = ({ children }) => <span className="bold">{children}</span>;
 const Text = ({ children }) => <p className="align-center">{children}</p>;
@@ -26,12 +26,7 @@ export const query = graphql`
           ... on ContentfulAsset {
             __typename
             contentful_id
-            fixed(quality: 100, resizingBehavior: NO_CHANGE) {
-              width
-              height
-              src
-              srcSet
-            }
+            gatsbyImageData(quality: 100, resizingBehavior: NO_CHANGE) 
           }
         }
       }
@@ -75,7 +70,16 @@ const Blog = (props) => {
         }
         return <Text>{children}</Text>;
       },
-      [BLOCKS.EMBEDDED_ASSET]: (node) => <Img {...node.data.target} />,
+      [BLOCKS.EMBEDDED_ASSET]: (node) => {
+        const { gatsbyImageData } = node.data.target
+        console.log('gatsbyimagedata',gatsbyImageData)
+        if (!gatsbyImageData) {
+          // asset is not an image
+          return null
+        }
+        return <GatsbyImage image={gatsbyImageData} alt='' />
+      
+      },
       [BLOCKS.EMBEDDED_ENTRY]: (text) => (
         <pre>
           <code>{text}</code>
