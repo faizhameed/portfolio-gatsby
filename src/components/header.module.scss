@@ -5,7 +5,8 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  box-shadow: -20px -16px 20px 0px;
+  transition: 0.5s;
+
   .contentWrapper {
     display: flex;
     flex-wrap: wrap;
@@ -35,6 +36,9 @@
       padding-right: 20px;
     }
   }
+}
+.shadow {
+  box-shadow: -20px -16px 20px 0px;
 }
 
 .link {

@@ -5,6 +5,7 @@ import Head from "../components/head";
 import { mediumPosts } from "../data/blogPosts";
 
 import blogStyles from "./blog.module.scss";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -17,9 +18,7 @@ const BlogPage = () => {
             publishedDate(formatString: "MMMM DD YYYY")
             excerpt
             featuredImage {
-              fixed(quality: 50) {
-                src
-              }
+              gatsbyImageData(quality: 50 width:200 placeholder: BLURRED) 
             }
           }
         }
@@ -57,7 +56,7 @@ const BlogPage = () => {
             return (
               <li key={post.node.title} className={blogStyles.post}>
                 <Link to={`/blog/${post.node.slug}`}>
-                  <img src={post.node.featuredImage.fixed.src} alt="" />
+                  <GatsbyImage image={post.node.featuredImage.gatsbyImageData} className={blogStyles.featured_img} alt="" />
                   <h2>{post.node.title}</h2>
                   <p>{post.node.publishedDate}</p>
                   <p className={blogStyles.excerpt}>{post.node.excerpt}</p>
