@@ -1,14 +1,17 @@
 import React from "react";
 import { Link } from "gatsby";
-import cx from 'classnames'
+import cx from "classnames";
 /* import "./header.module.scss" */
+import { AiTwotoneEdit, AiFillHome, AiFillContacts } from "react-icons/ai";
 import styles from "./header.module.scss"; //css modules
 
-const Header = ({noShadow}) => {
+const Header = ({ noShadow }) => {
   return (
-    <header className={cx(styles.header,{
-      [styles.shadow]:!noShadow
-    })}>
+    <header
+      className={cx(styles.header, {
+        [styles.shadow]: !noShadow,
+      })}
+    >
       <div className={styles.contentWrapper}>
         <Link className={styles.title} to="/">
           <div className={styles.logoName}>FH</div>
@@ -20,7 +23,8 @@ const Header = ({noShadow}) => {
               activeClassName={styles.activeNavItem}
               to="/"
             >
-              Home
+              <AiFillHome />
+              <p>Home</p>
             </Link>
           </li>
           <li>
@@ -29,7 +33,8 @@ const Header = ({noShadow}) => {
               activeClassName={styles.activeNavItem}
               to="/contact"
             >
-              Contact
+              <AiFillContacts />
+              <p>Contact</p>
             </Link>
           </li>
           <li>
@@ -38,7 +43,8 @@ const Header = ({noShadow}) => {
               activeClassName={styles.activeNavItem}
               to="/blog"
             >
-              Blog
+              <AiTwotoneEdit />
+              <p>Blog</p>
             </Link>
           </li>
           {/* <li>
