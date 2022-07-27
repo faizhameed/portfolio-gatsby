@@ -2,10 +2,20 @@ import React from "react";
 import { Link } from "gatsby";
 import cx from "classnames";
 /* import "./header.module.scss" */
-import { AiTwotoneEdit, AiFillHome, AiFillContacts } from "react-icons/ai";
+import {
+  AiTwotoneEdit,
+  AiFillHome,
+  AiFillContacts,
+  AiOutlineHome,
+  AiOutlineContacts,
+  AiOutlineEdit,
+} from "react-icons/ai";
 import styles from "./header.module.scss"; //css modules
+import { URL_CONSTANTS } from "../config/urlConstants";
 
 const Header = ({ noShadow }) => {
+  const url = typeof window !== "undefined" ? window.location.pathname : "";
+  const { HOME, CONTACT, BLOG } = URL_CONSTANTS;
   return (
     <header
       className={cx(styles.header, {
@@ -21,9 +31,9 @@ const Header = ({ noShadow }) => {
             <Link
               className={styles.navItem}
               activeClassName={styles.activeNavItem}
-              to="/"
+              to={HOME}
             >
-              <AiFillHome />
+              {url === HOME ? <AiFillHome /> : <AiOutlineHome />}
               <p>Home</p>
             </Link>
           </li>
@@ -31,9 +41,9 @@ const Header = ({ noShadow }) => {
             <Link
               className={styles.navItem}
               activeClassName={styles.activeNavItem}
-              to="/contact"
+              to={CONTACT}
             >
-              <AiFillContacts />
+              {url === CONTACT ? <AiFillContacts /> : <AiOutlineContacts />}
               <p>Contact</p>
             </Link>
           </li>
@@ -41,9 +51,13 @@ const Header = ({ noShadow }) => {
             <Link
               className={styles.navItem}
               activeClassName={styles.activeNavItem}
-              to="/blog"
+              to={BLOG}
             >
-              <AiTwotoneEdit />
+              {url === URL_CONSTANTS.BLOG ? (
+                <AiTwotoneEdit />
+              ) : (
+                <AiOutlineEdit />
+              )}
               <p>Blog</p>
             </Link>
           </li>
