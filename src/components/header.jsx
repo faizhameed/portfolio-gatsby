@@ -14,7 +14,7 @@ import styles from "./header.module.scss"; //css modules
 import { URL_CONSTANTS } from "../config/urlConstants";
 
 const Header = ({ noShadow }) => {
-  const [url, setUrl] = useState(null);
+  const [url, setUrl] = useState("");
   useEffect(() => {
     setUrlPath();
   }, []);
@@ -22,7 +22,6 @@ const Header = ({ noShadow }) => {
   const setUrlPath = () => {
     setUrl(typeof window !== "undefined" ? window.location.pathname : "");
   };
-  console.log("url", url);
   const { HOME, CONTACT, BLOG } = URL_CONSTANTS;
   return (
     <header
@@ -53,7 +52,11 @@ const Header = ({ noShadow }) => {
               to={CONTACT}
               onClick={setUrlPath}
             >
-              {url === CONTACT ? <AiFillContacts /> : <AiOutlineContacts />}
+              {url.startsWith(CONTACT) ? (
+                <AiFillContacts />
+              ) : (
+                <AiOutlineContacts />
+              )}
               <p>Contact</p>
             </Link>
           </li>
@@ -64,11 +67,7 @@ const Header = ({ noShadow }) => {
               to={BLOG}
               onClick={setUrlPath}
             >
-              {url === URL_CONSTANTS.BLOG ? (
-                <AiTwotoneEdit />
-              ) : (
-                <AiOutlineEdit />
-              )}
+              {url.startsWith(BLOG) ? <AiTwotoneEdit /> : <AiOutlineEdit />}
               <p>Blog</p>
             </Link>
           </li>
