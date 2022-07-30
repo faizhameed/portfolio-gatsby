@@ -10,11 +10,15 @@ import {
   AiOutlineContacts,
   AiOutlineEdit,
 } from "react-icons/ai";
-import styles from "./header.module.scss"; //css modules
 import { URL_CONSTANTS } from "../config/urlConstants";
+import MoonSvg from "../assets/moon.svg";
+import SunSvg from "../assets/sun.svg";
+
+import styles from "./header.module.scss"; //css modules
 
 const Header = ({ noShadow }) => {
   const [url, setUrl] = useState("");
+  const [isDarkMode, setIsDarkMode] = useState(false);
   useEffect(() => {
     setUrlPath();
   }, []);
@@ -81,6 +85,21 @@ const Header = ({ noShadow }) => {
             </Link>
           </li> */}
         </ul>
+        <div className={styles.mode}>
+          {isDarkMode ? (
+            <img
+              src={MoonSvg}
+              alt="dark mode"
+              onClick={() => setIsDarkMode(false)}
+            />
+          ) : (
+            <img
+              src={SunSvg}
+              alt="light mode"
+              onClick={() => setIsDarkMode(true)}
+            />
+          )}
+        </div>
       </div>
     </header>
   );
