@@ -1,3 +1,5 @@
+@import "../styles/_colors.scss";
+
 .posts {
   list-style-type: none;
   margin: 0;
@@ -9,11 +11,11 @@
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
-  background: #f4f4f4;
+  background: $card_light_bg;
   max-width: 300px;
   transition: 0.25s background;
   a {
-    color: #000000;
+    color: $dark_bg;
     padding: 1px;
     text-decoration: none;
   }
@@ -22,7 +24,7 @@
     font-weight: 400;
   }
   p {
-    color: #777777;
+    color: $text_color_grey;
     font-size: 0.8rem;
     font-style: italic;
     margin-bottom: 5px;
@@ -32,7 +34,7 @@
     font-size: 12px;
   }
   &:hover {
-    background: #e4e4e4;
+    background: $hover_grey;
   }
 }
 .featured_img {
