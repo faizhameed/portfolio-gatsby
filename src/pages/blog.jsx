@@ -18,7 +18,7 @@ const BlogPage = () => {
             publishedDate(formatString: "MMMM DD YYYY")
             excerpt
             featuredImage {
-              gatsbyImageData(quality: 50 width:200 placeholder: BLURRED) 
+              gatsbyImageData(quality: 50, width: 200, placeholder: BLURRED)
             }
           }
         }
@@ -56,7 +56,11 @@ const BlogPage = () => {
             return (
               <li key={post.node.title} className={blogStyles.post}>
                 <Link to={`/blog/${post.node.slug}`}>
-                  <GatsbyImage image={post.node.featuredImage.gatsbyImageData} className={blogStyles.featured_img} alt="" />
+                  <GatsbyImage
+                    image={post.node.featuredImage.gatsbyImageData}
+                    className={blogStyles.featured_img}
+                    alt=""
+                  />
                   <h2>{post.node.title}</h2>
                   <p>{post.node.publishedDate}</p>
                   <p className={blogStyles.excerpt}>{post.node.excerpt}</p>
