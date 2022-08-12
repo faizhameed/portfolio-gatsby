@@ -16,9 +16,9 @@ import SunSvg from "../assets/sun.svg";
 
 import styles from "./header.module.scss"; //css modules
 
-const Header = ({ noShadow }) => {
+const Header = ({ noShadow, isDarkMode, setIsDarkMode }) => {
   const [url, setUrl] = useState("");
-  const [isDarkMode, setIsDarkMode] = useState(false);
+
   useEffect(() => {
     setUrlPath();
   }, []);
