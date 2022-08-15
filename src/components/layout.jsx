@@ -23,15 +23,17 @@ const Layout = ({ children, noShadow, setNoShadow }) => {
     }
   }, 300);
   return (
-    <div onScroll={onScroll} className={layoutStyles.body}>
-      <Header
-        noShadow={noShadow}
-        isDarkMode={isDarkMode}
-        setIsDarkMode={setIsDarkMode}
-      />
-      <div className={cx(layoutStyles.container)}>
-        <div className={layoutStyles.content}>{children}</div>
-        <Footer />
+    <div className={isDarkMode ? "dark" : ""}>
+      <div onScroll={onScroll} className={layoutStyles.body}>
+        <Header
+          noShadow={noShadow}
+          isDarkMode={isDarkMode}
+          setIsDarkMode={setIsDarkMode}
+        />
+        <div className={cx(layoutStyles.container)}>
+          <div className={layoutStyles.content}>{children}</div>
+          <Footer />
+        </div>
       </div>
     </div>
   );

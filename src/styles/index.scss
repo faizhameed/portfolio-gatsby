@@ -1,3 +1,4 @@
+@use "colors" as c;
 html {
   font-family: "roboto", sans-serif;
   -ms-text-size-adjust: 100%;
@@ -569,6 +570,26 @@ thead {
   padding: 0.5em;
   overflow: auto;
 }
+.dark {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: c.$dark_heading;
+  }
+  p {
+    color: c.$dark_para;
+  }
+  .bg {
+    background-color: c.$dark_bg;
+  }
+  div {
+    background-color: c.$dark_bg;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
