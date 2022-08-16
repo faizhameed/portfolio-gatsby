@@ -10,6 +10,7 @@ import {
   AiOutlineContacts,
   AiOutlineEdit,
 } from "react-icons/ai";
+import { BsMoonStarsFill } from "react-icons/bs";
 import { URL_CONSTANTS } from "../config/urlConstants";
 import MoonSvg from "../assets/moon.svg";
 import SunSvg from "../assets/sun.svg";
@@ -87,9 +88,11 @@ const Header = ({ noShadow, isDarkMode, setIsDarkMode }) => {
         </ul>
         <div className={styles.mode}>
           {isDarkMode ? (
-            <img
-              src={MoonSvg}
+            <BsMoonStarsFill
               alt="dark mode"
+              color="#fff"
+              className={styles.moon}
+              size={25}
               onClick={() => setIsDarkMode(false)}
             />
           ) : (
