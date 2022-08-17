@@ -23,7 +23,7 @@ const Layout = ({ children, noShadow, setNoShadow }) => {
     }
   }, 300);
   return (
-    <div className={isDarkMode ? "dark" : ""}>
+    <div className={isDarkMode ? "dark" : "light"}>
       <div onScroll={onScroll} className={layoutStyles.body}>
         <Header
           noShadow={noShadow}

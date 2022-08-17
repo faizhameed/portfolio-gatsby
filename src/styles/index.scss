@@ -203,6 +203,13 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  .card {
+    img {
+      min-height: 300px;
+      max-width: 280px;
+      object-fit: contain;
+    }
+  }
 }
 img {
   max-width: 100%;
@@ -571,6 +578,13 @@ thead {
   padding: 0.5em;
   overflow: auto;
 }
+.light {
+  .card {
+    &:hover {
+      background: c.$hover_grey;
+    }
+  }
+}
 .dark {
   h1,
   h2,
@@ -586,11 +600,19 @@ thead {
   .bg {
     background-color: c.$dark_bg;
   }
-  div {
+  & > div {
+    background-color: c.$dark_bg;
+    transition: background-color 0.5s;
+  }
+  header,
+  footer {
     background-color: c.$dark_bg;
   }
-  header {
-    background-color: c.$dark_bg;
+  .card {
+    background-color: c.$dark_bg2;
+    &:hover {
+      background: c.$dark_bg3;
+    }
   }
 }
 
