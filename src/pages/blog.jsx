@@ -43,7 +43,7 @@ const BlogPage = () => {
           {allPosts.map((post, i) => {
             if (post.node.url) {
               return (
-                <li key={post.node.title} className={blogStyles.post}>
+                <li key={post.node.title} className={"card " + blogStyles.post}>
                   <a href={post.node.url} target="__blank">
                     <img src={post.node.Img} alt="" />
                     <h2>{post.node.title}</h2>
@@ -54,7 +54,7 @@ const BlogPage = () => {
               );
             }
             return (
-              <li key={post.node.title} className={blogStyles.post}>
+              <li key={post.node.title} className={"card " + blogStyles.post}>
                 <Link to={`/blog/${post.node.slug}`}>
                   <GatsbyImage
                     image={post.node.featuredImage.gatsbyImageData}

@@ -13,7 +13,7 @@
   border-radius: 10px;
   background: $card_light_bg;
   max-width: 300px;
-  transition: 0.25s background;
+  transition: background-color 0.25s;
   a {
     color: $dark_bg;
     padding: 1px;
@@ -24,7 +24,6 @@
     font-weight: 400;
   }
   p {
-    color: $text_color_grey;
     font-size: 0.8rem;
     font-style: italic;
     margin-bottom: 5px;
@@ -32,9 +31,6 @@
   .excerpt {
     font-style: normal;
     font-size: 12px;
-  }
-  &:hover {
-    background: $hover_grey;
   }
 }
 .featured_img {
