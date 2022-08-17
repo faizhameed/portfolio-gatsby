@@ -26,22 +26,18 @@ const HomePage = () => {
       }
     }
   `);
-  
+
   return (
-    <div >
+    <div>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.title}>{HOMEPAGE_DATA.greet}</div>
+          <h2 className={styles.title}>{HOMEPAGE_DATA.greet}</h2>
           <h2 className={styles.title}>
             <span>I'm </span>
             <span className={styles.name}>{HOMEPAGE_DATA.name}</span>
           </h2>
-          <p>
-            {HOMEPAGE_DATA.tagline}
-          </p>
-          <p>
-            {HOMEPAGE_DATA.tagline2}
-          </p>
+          <p>{HOMEPAGE_DATA.tagline}</p>
+          <p>{HOMEPAGE_DATA.tagline2}</p>
         </div>
       </div>
       <div>

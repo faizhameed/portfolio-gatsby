@@ -10,6 +10,7 @@ import {
   AiOutlineContacts,
   AiOutlineEdit,
 } from "react-icons/ai";
+import { BsMoonStarsFill } from "react-icons/bs";
 import { URL_CONSTANTS } from "../config/urlConstants";
 import MoonSvg from "../assets/moon.svg";
 import SunSvg from "../assets/sun.svg";
@@ -45,7 +46,11 @@ const Header = ({ noShadow, isDarkMode, setIsDarkMode }) => {
               to={HOME}
               onClick={setUrlPath}
             >
-              {url === HOME ? <AiFillHome /> : <AiOutlineHome />}
+              {url === HOME ? (
+                <AiFillHome color={isDarkMode && "#fff"} />
+              ) : (
+                <AiOutlineHome color={isDarkMode && "#fff"} />
+              )}
               <p>Home</p>
             </Link>
           </li>
@@ -57,9 +62,9 @@ const Header = ({ noShadow, isDarkMode, setIsDarkMode }) => {
               onClick={setUrlPath}
             >
               {url.startsWith(CONTACT) ? (
-                <AiFillContacts />
+                <AiFillContacts color={isDarkMode && "#fff"} />
               ) : (
-                <AiOutlineContacts />
+                <AiOutlineContacts color={isDarkMode && "#fff"} />
               )}
               <p>Contact</p>
             </Link>
@@ -71,7 +76,11 @@ const Header = ({ noShadow, isDarkMode, setIsDarkMode }) => {
               to={BLOG}
               onClick={setUrlPath}
             >
-              {url.startsWith(BLOG) ? <AiTwotoneEdit /> : <AiOutlineEdit />}
+              {url.startsWith(BLOG) ? (
+                <AiTwotoneEdit color={isDarkMode && "#fff"} />
+              ) : (
+                <AiOutlineEdit color={isDarkMode && "#fff"} />
+              )}
               <p>Blog</p>
             </Link>
           </li>
@@ -87,9 +96,11 @@ const Header = ({ noShadow, isDarkMode, setIsDarkMode }) => {
         </ul>
         <div className={styles.mode}>
           {isDarkMode ? (
-            <img
-              src={MoonSvg}
+            <BsMoonStarsFill
               alt="dark mode"
+              color="#fff"
+              className={styles.moon}
+              size={25}
               onClick={() => setIsDarkMode(false)}
             />
           ) : (

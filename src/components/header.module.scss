@@ -1,5 +1,4 @@
 .header {
-  background-color: white;
   position: fixed;
   width: 100%;
   left: 50%;
@@ -13,7 +12,6 @@
     margin: 0 auto;
     max-width: 1050px;
     padding: 0 1rem;
-    background: #fff;
     @media screen and (max-width: 1300px) {
       max-width: 650px;
       @media screen and (max-width: 800px) {
@@ -80,5 +78,8 @@
   display: flex;
   img {
     width: 30px;
+  }
+  .moon {
+    margin: auto;
   }
 }

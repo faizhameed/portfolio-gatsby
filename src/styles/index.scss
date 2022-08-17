@@ -1,3 +1,4 @@
+@use "colors" as c;
 html {
   font-family: "roboto", sans-serif;
   -ms-text-size-adjust: 100%;
@@ -22,6 +23,7 @@ nav,
 section,
 summary {
   display: block;
+  background-color: c.$white;
 }
 audio,
 canvas,
@@ -201,6 +203,13 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  .card {
+    img {
+      min-height: 300px;
+      max-width: 280px;
+      object-fit: contain;
+    }
+  }
 }
 img {
   max-width: 100%;
@@ -569,6 +578,44 @@ thead {
   padding: 0.5em;
   overflow: auto;
 }
+.light {
+  .card {
+    &:hover {
+      background: c.$hover_grey;
+    }
+  }
+}
+.dark {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: c.$dark_heading;
+  }
+  p {
+    color: c.$dark_para;
+  }
+  .bg {
+    background-color: c.$dark_bg;
+  }
+  & > div {
+    background-color: c.$dark_bg;
+    transition: background-color 0.5s;
+  }
+  header,
+  footer {
+    background-color: c.$dark_bg;
+  }
+  .card {
+    background-color: c.$dark_bg2;
+    &:hover {
+      background: c.$dark_bg3;
+    }
+  }
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
