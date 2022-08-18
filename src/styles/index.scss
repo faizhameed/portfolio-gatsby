@@ -194,7 +194,12 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: #1c1c1c;
+  .light {
+    color: c.$light_text;
+  }
+  .dark {
+    color: c.$dark_para;
+  }
   font-family: "roboto", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
