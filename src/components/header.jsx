@@ -12,7 +12,6 @@ import {
 } from "react-icons/ai";
 import { BsMoonStarsFill } from "react-icons/bs";
 import { URL_CONSTANTS } from "../config/urlConstants";
-import MoonSvg from "../assets/moon.svg";
 import SunSvg from "../assets/sun.svg";
 
 import styles from "./header.module.scss"; //css modules
@@ -47,9 +46,9 @@ const Header = ({ noShadow, isDarkMode, setIsDarkMode }) => {
               onClick={setUrlPath}
             >
               {url === HOME ? (
-                <AiFillHome color={isDarkMode && "#fff"} />
+                <AiFillHome {...(isDarkMode ? { color: "#fff" } : {})} />
               ) : (
-                <AiOutlineHome color={isDarkMode && "#fff"} />
+                <AiOutlineHome {...(isDarkMode ? { color: "#fff" } : {})} />
               )}
               <p>Home</p>
             </Link>
@@ -62,9 +61,9 @@ const Header = ({ noShadow, isDarkMode, setIsDarkMode }) => {
               onClick={setUrlPath}
             >
               {url.startsWith(CONTACT) ? (
-                <AiFillContacts color={isDarkMode && "#fff"} />
+                <AiFillContacts {...(isDarkMode ? { color: "#fff" } : {})} />
               ) : (
-                <AiOutlineContacts color={isDarkMode && "#fff"} />
+                <AiOutlineContacts {...(isDarkMode ? { color: "#fff" } : {})} />
               )}
               <p>Contact</p>
             </Link>
@@ -77,9 +76,9 @@ const Header = ({ noShadow, isDarkMode, setIsDarkMode }) => {
               onClick={setUrlPath}
             >
               {url.startsWith(BLOG) ? (
-                <AiTwotoneEdit color={isDarkMode && "#fff"} />
+                <AiTwotoneEdit {...(isDarkMode ? { color: "#fff" } : {})} />
               ) : (
-                <AiOutlineEdit color={isDarkMode && "#fff"} />
+                <AiOutlineEdit {...(isDarkMode ? { color: "#fff" } : {})} />
               )}
               <p>Blog</p>
             </Link>
