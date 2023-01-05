@@ -19,6 +19,10 @@
       }
       @media screen and (max-width: 450px) {
         max-width: 320px;
+        justify-content: center;
+        .mode {
+          margin: auto;
+        }
       }
     }
   }
