@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import cx from "classnames";
 import Header from "./header";
 import Footer from "./footer";
 import layoutStyles from "./layout.module.scss";
+import ThemeContext from "../context/ThemeContext";
 import throttle from "../utils/throttle";
 import "../styles/index.scss";
 import "prism-theme-one-dark/prism-onedark.css";
 
 const Layout = ({ children, noShadow, setNoShadow }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
   const onScroll = throttle((e) => {
     const currentScrollY = e.target.scrollTop;
     if (noShadow) {
@@ -23,19 +22,23 @@ const Layout = ({ children, noShadow, setNoShadow }) => {
     }
   }, 300);
   return (
-    <div className={isDarkMode ? "dark" : "light"}>
-      <div onScroll={onScroll} className={layoutStyles.body}>
-        <Header
-          noShadow={noShadow}
-          isDarkMode={isDarkMode}
-          setIsDarkMode={setIsDarkMode}
-        />
-        <div className={cx(layoutStyles.container)}>
-          <div className={layoutStyles.content}>{children}</div>
-          <Footer />
+    <ThemeContext.Consumer>
+      {(theme) => (
+        <div className={theme.dark ? "dark" : "light"}>
+          <div onScroll={onScroll} className={layoutStyles.body}>
+            <Header
+              noShadow={noShadow}
+              isDarkMode={theme.dark}
+              setIsDarkMode={theme.toggleDark}
+            />
+            <div className={cx(layoutStyles.container)}>
+              <div className={layoutStyles.content}>{children}</div>
+              <Footer />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </ThemeContext.Consumer>
   );
 };
 
