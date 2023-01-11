@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import cx from "classnames";
-/* import "./header.module.scss" */
 import {
   AiTwotoneEdit,
   AiFillHome,
@@ -100,14 +99,10 @@ const Header = ({ noShadow, isDarkMode, setIsDarkMode }) => {
               color="#fff"
               className={styles.moon}
               size={25}
-              onClick={() => setIsDarkMode(false)}
+              onClick={setIsDarkMode}
             />
           ) : (
-            <img
-              src={SunSvg}
-              alt="light mode"
-              onClick={() => setIsDarkMode(true)}
-            />
+            <img src={SunSvg} alt="light mode" onClick={setIsDarkMode} />
           )}
         </div>
       </div>
