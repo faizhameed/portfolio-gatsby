@@ -1,6 +1,4 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const defaultState = {
   dark: false,
@@ -9,10 +7,13 @@ const defaultState = {
 
 const ThemeContext = React.createContext(defaultState);
 
-// Getting dark mode information from OS!
-// You need macOS Mojave + Safari Technology Preview Release 68 to test this currently.
-const supportsDarkMode = () =>
-  window.matchMedia("(prefers-color-scheme: dark)").matches === true;
+///////////////////////////////////////////////////////////////////////////////////////
+/* Getting dark mode information from OS!
+You need macOS Mojave + Safari Technology Preview Release 68 to test this currently. */
+///////////////////////////////////////////////////////////////////////////////////////
+/* const supportsDarkMode = () =>
+  window.matchMedia("(prefers-color-scheme: dark)").matches === true; */
+///////////////////////////////////////////////////////////////////////////////////////
 
 export const ThemeProvider = ({ children }) => {
   const [state, setState] = useState(defaultState);
@@ -28,8 +29,6 @@ export const ThemeProvider = ({ children }) => {
     const lsDark = JSON.parse(localStorage.getItem("dark"));
     if (lsDark) {
       setState({ ...state, dark: lsDark });
-    } else if (supportsDarkMode()) {
-      setState({ ...state, dark: true });
     }
   }, []);
 
