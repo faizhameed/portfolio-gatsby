@@ -28,7 +28,7 @@ export const ThemeProvider = ({ children }) => {
     // Getting dark mode value from localStorage!
     const lsDark = JSON.parse(localStorage.getItem("dark"));
     if (lsDark) {
-      setState({ ...state, dark: lsDark });
+      setState((preState) => ({ ...preState, dark: lsDark }));
     }
   }, []);
 
