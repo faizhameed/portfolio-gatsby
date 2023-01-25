@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import cx from "classnames";
 import Header from "./header";
 import Footer from "./footer";
