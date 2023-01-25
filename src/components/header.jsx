@@ -94,15 +94,18 @@ const Header = ({ noShadow, isDarkMode, setIsDarkMode }) => {
         </ul>
         <div className={styles.mode}>
           {isDarkMode ? (
-            <BsMoonStarsFill
-              alt="dark mode"
-              color="#fff"
-              className={styles.moon}
-              size={25}
-              onClick={setIsDarkMode}
-            />
+            <button className={styles.btn} onClick={setIsDarkMode}>
+              <BsMoonStarsFill
+                alt="dark mode"
+                color="#fff"
+                className={styles.moon}
+                size={25}
+              />
+            </button>
           ) : (
-            <img src={SunSvg} alt="light mode" onClick={setIsDarkMode} />
+            <button className={styles.btn} onClick={setIsDarkMode}>
+              <img src={SunSvg} alt="light mode" />
+            </button>
           )}
         </div>
       </div>
