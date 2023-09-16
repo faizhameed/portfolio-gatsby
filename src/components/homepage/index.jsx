@@ -36,8 +36,8 @@ const HomePage = () => {
             <span>I'm </span>
             <span className={styles.name}>{HOMEPAGE_DATA.name}</span>
           </h2>
-          <p>{HOMEPAGE_DATA.tagline}</p>
-          <p>{HOMEPAGE_DATA.tagline2}</p>
+          <p className={styles.subtitle}>{HOMEPAGE_DATA.subtitle}</p>
+          <p className={styles.tagline}>{HOMEPAGE_DATA.tagline}</p>
         </div>
       </div>
       <div>
