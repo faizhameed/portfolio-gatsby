@@ -1,16 +1,24 @@
 import { FaGoogle } from "react-icons/fa";
+import { HiOutlineDocumentText } from "react-icons/hi2";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" id="about">
       <section className="lg:col-span-1 p-8 bg-surface-light dark:bg-surface-dark rounded-3xl">
         <h2 className="text-3xl font-bold mb-4">The Short Version</h2>
-        <p className="text-subtle-light dark:text-subtle-dark leading-relaxed">
+        <p className="text-subtle-light dark:text-subtle-dark leading-relaxed mb-6">
           I&apos;m a product-minded engineer with a passion for creating
           impactful technology. My focus is on AI, developer tools, and building
           high-performing engineering cultures. I believe in transparency and
           share my learnings publicly.
         </p>
+        <Link
+          href="/resume"
+          className="inline-flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-800 text-subtle-light dark:text-subtle-dark font-semibold py-2.5 px-5 rounded-xl hover:text-heading-light dark:hover:text-heading-dark hover:bg-gray-200 dark:hover:bg-gray-700 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
+        >
+          <HiOutlineDocumentText className="text-lg" /> View My Journey
+        </Link>
       </section>
       <section
         className="lg:col-span-2 p-8 bg-surface-light dark:bg-surface-dark rounded-3xl"
