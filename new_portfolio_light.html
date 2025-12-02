@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Faiz Hameed - Personal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#4F46E5", // A vibrant indigo/blue-purple
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#0A0A0A",
+                        "surface-light": "#F9FAFB", // A very light gray for sections
+                        "surface-dark": "#111111",  // A very dark gray for sections
+                        "subtle-light": "#6B7280", // Muted text for light mode
+                        "subtle-dark": "#9CA3AF",   // Muted text for dark mode
+                        "heading-light": "#111827",
+                        "heading-dark": "#F9FAFB",
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#27272A",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        lg: "1rem",
+                        xl: "1.25rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem"
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Organic, sloppy blob shape for image container */
+        .blob-shape {
+            clip-path: polygon(30% 0%,
+                    70% 0%,
+                    100% 10%,
+                    95% 35%,
+                    100% 60%,
+                    90% 85%,
+                    70% 100%,
+                    30% 100%,
+                    10% 85%,
+                    0% 60%,
+                    5% 35%,
+                    0% 10%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), clip-path 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .blob-container:hover .blob-shape {
+            transform: scale(1.08);
+            clip-path: polygon(25% 0%,
+                    75% 0%,
+                    100% 8%,
+                    97% 32%,
+                    100% 58%,
+                    92% 88%,
+                    75% 100%,
+                    25% 100%,
+                    8% 88%,
+                    0% 58%,
+                    3% 32%,
+                    0% 8%);
+        }
+
+        .blob-image {
+            clip-path: polygon(30% 0%,
+                    70% 0%,
+                    100% 10%,
+                    95% 35%,
+                    100% 60%,
+                    90% 85%,
+                    70% 100%,
+                    30% 100%,
+                    10% 85%,
+                    0% 60%,
+                    5% 35%,
+                    0% 10%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), clip-path 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .blob-container:hover .blob-image {
+            transform: scale(1.08);
+            clip-path: polygon(25% 0%,
+                    75% 0%,
+                    100% 8%,
+                    97% 32%,
+                    100% 58%,
+                    92% 88%,
+                    75% 100%,
+                    25% 100%,
+                    8% 88%,
+                    0% 58%,
+                    3% 32%,
+                    0% 8%);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-heading-light font-body antialiased">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="py-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-8 h-8 bg-heading-light rounded-full flex items-center justify-center text-background-light font-bold text-lg">
+                    FH</div>
+                <span class="font-bold text-lg">Faiz Hameed</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-subtle-light">
+                <a class="hover:text-heading-light transition-colors" href="#">About</a>
+                <a class="hover:text-heading-light transition-colors" href="#">Work</a>
+                <a class="hover:text-heading-light transition-colors" href="#">YouTube</a>
+                <a class="hover:text-heading-light transition-colors" href="#">Blog</a>
+                <a class="hover:text-heading-light transition-colors" href="https://faizhameed.medium.com/"
+                    target="_blank" rel="noopener noreferrer">Medium</a>
+            </nav>
+            <button class="w-10 h-10 flex items-center justify-center rounded-full border border-border-light">
+                <span class="material-icons-outlined text-xl">light_mode</span>
+            </button>
+        </header>
+        <main class="space-y-24 md:space-y-32 my-12">
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12 md:py-24">
+                <div class="order-2 lg:order-1 text-center lg:text-left">
+                    <h1
+                        class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-tight md:leading-tight mb-6">
+                        Building AI Products, Scaling Teams &amp; Growing in Public
+                    </h1>
+                    <p class="max-w-xl mx-auto lg:mx-0 text-lg md:text-xl text-subtle-light mb-10">
+                        I'm Faiz Hameed, a Senior Software Engineer at Google and founder, sharing my journey of
+                        building great products and teams.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4">
+                        <a class="w-full sm:w-auto bg-primary text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+                            href="#">
+                            <span class="material-icons-outlined">play_circle</span>
+                            Watch My YouTube
+                        </a>
+                        <a class="w-full sm:w-auto bg-surface-light text-heading-light font-semibold py-3 px-6 rounded-lg border border-border-light flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors"
+                            href="#">
+                            Work With Me
+                        </a>
+                        <a class="w-full sm:w-auto text-subtle-light font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 hover:text-heading-light transition-colors"
+                            href="#">
+                            View Resume
+                            <span class="material-icons-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <div class="blob-container w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 relative">
+                        <div class="blob-shape absolute inset-0 bg-primary/20 blur-3xl"></div>
+                        <img alt="Faiz Hameed" class="blob-image relative w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD70nMw1gIRjZkqHqVBClk0J9Fp1921QR3NBqbDiIIPbIOBpomkz_cGPdSySLvz7w07bidmJ-0NYLOFXnYU0dZDIXxPVVHkFlzq26KaOtE5NhJhE89AFDAB0vTj9fuCwVPap2A9hfqcQ2dUvv93Z_GQ09ug8zKadnflASRb7GpJKsRl-kY9qBeAzEBZyXlTaXx1Ns97nJ3Dz4eqSz3SFo1o8yaaDVdXSVJHmSre6F1ZIpej1oeqKEsTpuo1fdBTd9IpEUgs582Zgy8" />
+                    </div>
+                </div>
+            </section>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <section class="lg:col-span-1 p-8 bg-surface-light rounded-3xl">
+                    <h2 class="text-3xl font-bold mb-4">The Short Version</h2>
+                    <p class="text-subtle-light leading-relaxed">
+                        I'm a product-minded engineer with a passion for creating impactful technology. My focus is on
+                        AI, developer tools, and building high-performing engineering cultures. I believe in
+                        transparency and share my learnings publicly.
+                    </p>
+                </section>
+                <section class="lg:col-span-2 p-8 bg-surface-light rounded-3xl">
+                    <h2 class="text-3xl font-bold mb-6">My Work</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-background-light transition-colors">
+                            <div class="w-12 h-12 rounded-lg bg-red-500 flex-shrink-0"></div>
+                            <div>
+                                <h3 class="font-bold text-lg">Engineering @ Google</h3>
+                                <p class="text-subtle-light">Leading teams to build and scale core products used by
+                                    millions.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-background-light transition-colors">
+                            <div class="w-12 h-12 rounded-lg bg-indigo-500 flex-shrink-0"></div>
+                            <div>
+                                <h3 class="font-bold text-lg">Studio Asher</h3>
+                                <p class="text-subtle-light">My creative studio where I explore design, branding, and
+                                    new ventures.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-background-light transition-colors">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-500 flex-shrink-0"></div>
+                            <div>
+                                <h3 class="font-bold text-lg">Building Products</h3>
+                                <p class="text-subtle-light">From side-projects to startups, I love bringing ideas to
+                                    life.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section class="p-8 bg-surface-light rounded-3xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">YouTube / Content Creator</h2>
+                        <p class="text-subtle-light leading-relaxed mb-6">
+                            I document my journey as an engineer and founder on YouTube. I cover topics like career
+                            growth in tech, building in public, productivity, and the latest in AI.
+                        </p>
+                        <a class="bg-primary text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center gap-2 hover:opacity-90 transition-opacity"
+                            href="#">
+                            Subscribe on YouTube
+                            <span class="material-icons-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <div class="w-full h-full bg-border-light rounded-2xl flex items-center justify-center">
+                            <span class="material-icons-outlined text-6xl text-subtle-light">play_circle_filled</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="flex justify-between items-end mb-8">
+                    <h2 class="text-3xl font-bold">Blog / Essays</h2>
+                    <a class="text-primary font-semibold flex items-center gap-1 group" href="#">
+                        View All
+                        <span
+                            class="material-icons-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group">
+                        <div class="mb-4 overflow-hidden rounded-2xl">
+                            <div
+                                class="w-full h-48 bg-surface-light border border-border-light rounded-2xl group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                        </div>
+                        <p class="text-sm text-subtle-light mb-1">June 10, 2024</p>
+                        <h3 class="text-xl font-bold mb-2">My Framework for Scaling Engineering Teams</h3>
+                        <p class="text-subtle-light">How to go from a team of 5 to 50 without losing speed or culture.
+                        </p>
+                    </div>
+                    <div class="group">
+                        <div class="mb-4 overflow-hidden rounded-2xl">
+                            <div
+                                class="w-full h-48 bg-surface-light border border-border-light rounded-2xl group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                        </div>
+                        <p class="text-sm text-subtle-light mb-1">May 21, 2024</p>
+                        <h3 class="text-xl font-bold mb-2">Lessons Learned from Building AI Side-Projects</h3>
+                        <p class="text-subtle-light">What I've learned about product, tech, and shipping fast.</p>
+                    </div>
+                    <div class="group">
+                        <div class="mb-4 overflow-hidden rounded-2xl">
+                            <div
+                                class="w-full h-48 bg-surface-light border border-border-light rounded-2xl group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                        </div>
+                        <p class="text-sm text-subtle-light mb-1">April 15, 2024</p>
+                        <h3 class="text-xl font-bold mb-2">Growing in Public: The Good, Bad, and Ugly</h3>
+                        <p class="text-subtle-light">A transparent look at the benefits and challenges of building an
+                            online presence.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="py-16 mt-24 border-t border-border-light">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-sm text-subtle-light">© 2025 Faiz Hameed. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a class="text-subtle-light hover:text-heading-light transition-colors" href="#">Twitter</a>
+                    <a class="text-subtle-light hover:text-heading-light transition-colors" href="#">YouTube</a>
+                    <a class="text-subtle-light hover:text-heading-light transition-colors" href="#">LinkedIn</a>
+                    <a class="text-subtle-light hover:text-heading-light transition-colors" href="#">GitHub</a>
+                    <a class="text-subtle-light hover:text-heading-light transition-colors"
+                        href="https://faizhameed.medium.com/" target="_blank" rel="noopener noreferrer">Medium</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
