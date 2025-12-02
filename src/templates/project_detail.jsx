@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
-import Image from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import Head from "../components/head";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS } from "@contentful/rich-text-types";
@@ -28,7 +28,14 @@ const Project = (props) => {
   const options = {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
-      [BLOCKS.EMBEDDED_ASSET]: (node) => <Image {...node.data.target} />,
+      [BLOCKS.EMBEDDED_ASSET]: (node) => {
+        const { gatsbyImageData } = node.data.target;
+        if (!gatsbyImageData) {
+          // asset is not an image
+          return null;
+        }
+        return <GatsbyImage image={gatsbyImageData} alt="" />;
+      },
     },
   };
   return (
