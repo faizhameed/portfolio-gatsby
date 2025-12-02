@@ -3,6 +3,7 @@ import Image from "next/image";
 import { HiOutlinePlayCircle } from "react-icons/hi2";
 
 import { HiOutlineArrowRight } from "react-icons/hi2";
+import { MdWorkOutline } from "react-icons/md";
 
 export default function Hero() {
   return (
@@ -26,11 +27,11 @@ export default function Hero() {
             className="w-full sm:w-auto bg-surface-light dark:bg-surface-dark text-heading-light dark:text-heading-dark font-semibold py-3 px-6 rounded-lg border border-border-light dark:border-border-dark flex items-center justify-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             href="#contact"
           >
-            Work With Me
+            <MdWorkOutline className="text-xl" /> Work With Me
           </a>
           <a
             className="w-full sm:w-auto text-subtle-light dark:text-subtle-dark font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 hover:text-heading-light dark:hover:text-heading-dark transition-colors"
-            href="#resume"
+            href="/resume"
           >
             View Resume <HiOutlineArrowRight className="text-xl" />
           </a>
