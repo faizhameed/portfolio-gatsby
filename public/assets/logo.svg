@@ -1,0 +1,25 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sunshade/Umbrella top -->
+  <path d="M16 3C9 3 4 7 4 13C4 14.5 4.5 16 5.5 17L16 29L26.5 17C27.5 16 28 14.5 28 13C28 7 23 3 16 3Z" 
+        fill="currentColor" 
+        className="dark:fill-heading-dark fill-heading-light"/>
+  
+  <!-- Umbrella handle -->
+  <line x1="16" y1="17" x2="16" y2="29" 
+        stroke="currentColor" 
+        strokeWidth="1.5" 
+        strokeLinecap="round"
+        className="dark:stroke-heading-dark stroke-heading-light"/>
+  
+  <!-- Cap/Bill - curved shape -->
+  <path d="M8 20C8 21.5 11.5 23 16 23C20.5 23 24 21.5 24 20C24 18.5 20.5 17 16 17C11.5 17 8 18.5 8 20Z" 
+        fill="currentColor"
+        className="dark:fill-heading-dark fill-heading-light"/>
+  
+  <!-- Cap top curve -->
+  <path d="M8 20C8 21.5 11.5 23 16 23C20.5 23 24 21.5 24 20" 
+        stroke="currentColor" 
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        className="dark:stroke-heading-dark stroke-heading-light"/>
+</svg>

@@ -1,0 +1,62 @@
+import { FaGoogle } from "react-icons/fa";
+
+export default function AboutSection() {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" id="about">
+      <section className="lg:col-span-1 p-8 bg-surface-light dark:bg-surface-dark rounded-3xl">
+        <h2 className="text-3xl font-bold mb-4">The Short Version</h2>
+        <p className="text-subtle-light dark:text-subtle-dark leading-relaxed">
+          I&apos;m a product-minded engineer with a passion for creating
+          impactful technology. My focus is on AI, developer tools, and building
+          high-performing engineering cultures. I believe in transparency and
+          share my learnings publicly.
+        </p>
+      </section>
+      <section
+        className="lg:col-span-2 p-8 bg-surface-light dark:bg-surface-dark rounded-3xl"
+        id="work"
+      >
+        <h2 className="text-3xl font-bold mb-6">My Work</h2>
+        <div className="space-y-6">
+          <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-background-light dark:hover:bg-background-dark transition-colors">
+            <div className="w-12 h-12 rounded-lg bg-red-500 flex-shrink-0 flex items-center justify-center">
+              <FaGoogle className="text-2xl text-white rounded-full" />
+            </div>
+            <div>
+              <h3 className="font-bold text-lg">Engineering @ Google</h3>
+              <p className="text-subtle-light dark:text-subtle-dark">
+                Leading teams to build and scale core products used by millions.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-background-light dark:hover:bg-background-dark transition-colors">
+            <div className="w-12 h-12 rounded-lg bg-indigo-500 flex-shrink-0"></div>
+            <div>
+              <h3
+                href="https://syndax.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-lg"
+              >
+                Syndax.io
+              </h3>
+              <p className="text-subtle-light dark:text-subtle-dark">
+                AI-powered software development platform for startups and
+                enterprises.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-background-light dark:hover:bg-background-dark transition-colors">
+            <div className="w-12 h-12 rounded-lg bg-emerald-500 flex-shrink-0"></div>
+            <div>
+              <h3 className="font-bold text-lg">Building Products</h3>
+              <p className="text-subtle-light dark:text-subtle-dark">
+                From side-projects to startups, I love bringing ideas to life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

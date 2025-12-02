@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Organic, sloppy blob shape for image container */
+.blob-shape {
+  border-radius:
+    /* horizontal */
+    100% 30% 60% 70% /
+    /* vertical */
+    50% 40% 70% 70%;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+  z-index: 0;
+}
+
+.blob-container:hover .blob-shape {
+  transform: scale(1.08) rotate(90deg);
+  border-radius:
+    /* horizontal */
+    70% 40% 80% 60% /
+    /* vertical */
+    60% 50% 60% 80%;
+}
+
+.blob-image {
+  position: absolute;
+  inset: 0;
+  border-radius:
+    /* horizontal */
+    100% 30% 60% 70% /
+    /* vertical */
+    50% 40% 70% 70%;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+  z-index: 1;
+}
+
+.blob-container:hover .blob-image {
+  transform: scale(1.08);
+  border-radius:
+    /* horizontal */
+    70% 40% 80% 60% /
+    /* vertical */
+    60% 50% 60% 80%;
+}
+
