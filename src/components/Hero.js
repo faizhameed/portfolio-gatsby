@@ -1,8 +1,10 @@
 import Image from "next/image";
 
-import { HiOutlinePlayCircle } from "react-icons/hi2";
-
-import { HiOutlineArrowRight } from "react-icons/hi2";
+import {
+  HiOutlinePlayCircle,
+  HiOutlineArrowRight,
+  HiOutlineDocumentText,
+} from "react-icons/hi2";
 import { MdWorkOutline } from "react-icons/md";
 
 export default function Hero() {
@@ -18,22 +20,23 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4">
           <a
-            className="w-full sm:w-auto bg-primary text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+            className="w-full sm:w-auto bg-primary text-white font-semibold py-3.5 px-7 rounded-xl flex items-center justify-center gap-2.5 hover:opacity-90 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 shadow-md shadow-primary/20"
             href="#youtube"
           >
             <HiOutlinePlayCircle className="text-xl" /> Watch My YouTube
           </a>
           <a
-            className="w-full sm:w-auto bg-surface-light dark:bg-surface-dark text-heading-light dark:text-heading-dark font-semibold py-3 px-6 rounded-lg border border-border-light dark:border-border-dark flex items-center justify-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            href="#contact"
+            className="w-full sm:w-auto bg-surface-light dark:bg-surface-dark text-heading-light dark:text-heading-dark font-semibold py-3.5 px-7 rounded-xl border-2 border-border-light dark:border-border-dark flex items-center justify-center gap-2.5 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-primary/30 dark:hover:border-primary/30 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+            href="/contact"
           >
             <MdWorkOutline className="text-xl" /> Work With Me
           </a>
           <a
-            className="w-full sm:w-auto text-subtle-light dark:text-subtle-dark font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-2 hover:text-heading-light dark:hover:text-heading-dark transition-colors"
+            className="w-full sm:w-auto text-subtle-light dark:text-subtle-dark font-semibold py-3.5 px-7 rounded-xl flex items-center justify-center gap-2.5 hover:text-heading-light dark:hover:text-heading-dark hover:bg-surface-light dark:hover:bg-surface-dark hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
             href="/resume"
           >
-            View Resume <HiOutlineArrowRight className="text-xl" />
+            <HiOutlineDocumentText className="text-xl" /> View Resume{" "}
+            <HiOutlineArrowRight className="text-lg" />
           </a>
         </div>
       </div>
