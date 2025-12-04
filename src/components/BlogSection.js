@@ -1,16 +1,16 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { mediumPosts } from '@/data/blogPosts'
-import { HiOutlineArrowRight } from 'react-icons/hi2'
+import { mediumPosts } from "@/data/blogPosts";
+import Image from "next/image";
+import Link from "next/link";
+import { HiOutlineArrowRight } from "react-icons/hi2";
 
 export default function BlogSection() {
   // Get the first 3 posts for the homepage
-  const featuredPosts = mediumPosts.slice(0, 3)
+  const featuredPosts = mediumPosts.slice(0, 3);
 
   return (
     <section id="blog">
       <div className="flex justify-between items-end mb-8">
-        <h2 className="text-3xl font-bold">Blog / Essays</h2>
+        <h2 className="text-3xl font-bold">Blog</h2>
         <Link
           className="text-primary font-semibold flex items-center gap-1 group"
           href="/blog"
@@ -44,11 +44,12 @@ export default function BlogSection() {
               {post.node.publishedDate}
             </p>
             <h3 className="text-xl font-bold mb-2">{post.node.title}</h3>
-            <p className="text-subtle-light dark:text-subtle-dark">{post.node.excerpt}</p>
+            <p className="text-subtle-light dark:text-subtle-dark">
+              {post.node.excerpt}
+            </p>
           </Link>
         ))}
       </div>
     </section>
-  )
+  );
 }
-
