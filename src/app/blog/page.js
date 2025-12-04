@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import { mediumPosts } from '@/data/blogPosts'
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import { mediumPosts } from "@/data/blogPosts";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function BlogPage() {
   return (
@@ -11,9 +11,10 @@ export default function BlogPage() {
         <Header />
         <main className="my-12">
           <div className="mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Blog / Essays</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Blog</h1>
             <p className="text-lg text-subtle-light dark:text-subtle-dark">
-              My thoughts on engineering, product development, and career growth.
+              My thoughts on engineering, product development, and career
+              growth.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -41,7 +42,9 @@ export default function BlogPage() {
                   {post.node.publishedDate}
                 </p>
                 <h3 className="text-xl font-bold mb-2">{post.node.title}</h3>
-                <p className="text-subtle-light dark:text-subtle-dark">{post.node.excerpt}</p>
+                <p className="text-subtle-light dark:text-subtle-dark">
+                  {post.node.excerpt}
+                </p>
               </Link>
             ))}
           </div>
@@ -49,6 +52,5 @@ export default function BlogPage() {
         <Footer />
       </div>
     </div>
-  )
+  );
 }
-
